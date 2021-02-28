@@ -1,0 +1,90 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Page2.xaml.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Remove="Page2.xaml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="11.0.2" />
+    <PackageReference Include="Plugin.Permissions" Version="2.2.1" />
+    <PackageReference Include="RestSharp" Version="106.1.0" />
+    <PackageReference Include="Rg.Plugins.Popup" Version="1.1.3.117-beta" />
+    <PackageReference Include="SaturdayMP.XPlugin.Notifications" Version="0.3.0-rc0002" />
+    <PackageReference Include="Xam.Plugin.Media" Version="3.2.0.245-beta" />
+    <PackageReference Include="Xam.Plugins.Settings" Version="3.1.1" />
+    <PackageReference Include="Xamarin.Forms" Version="2.5.0.122203" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Condition=" '$(EnableDefaultCompileItems)' == 'true' " Update="App.xaml.cs">
+      <DependentUpon>*.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="AppResource.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>AppResource.resx</DependentUpon>
+    </Compile>
+    <Compile Update="Views\popups\PopUpCompanies.xaml.cs">
+      <DependentUpon>PopUpCompanies.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\vMarkerRegister.xaml.cs">
+      <DependentUpon>vMarkerRegister.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\vRegisterList.xaml.cs">
+      <DependentUpon>vRegisterList.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\vUserList.xaml.cs">
+      <DependentUpon>vUserList.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\vLicenceValidation.xaml.cs">
+      <DependentUpon>vLicenceValidation.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\vNewUser.xaml.cs">
+      <DependentUpon>vNewUser.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\vMain.xaml.cs">
+      <DependentUpon>vMain.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\vMessage.xaml.cs">
+      <DependentUpon>vMessage.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\vStepsPinMatch.xaml.cs">
+      <DependentUpon>vStepsPinMatch.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\vStepsPin.xaml.cs">
+      <DependentUpon>vStepsPin.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\vUserCheckin.xaml.cs">
+      <DependentUpon>vUserCheckin.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\popups\PopUpMessage.xaml.cs">
+      <DependentUpon>PopUpMessage.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="AppResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>AppResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\vLicenceValidation.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\popups\PopUpMessage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Ioc\" />
+    <Folder Include="Services\" />
+  </ItemGroup>
+</Project>

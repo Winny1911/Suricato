@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<pages:PopupPage 
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:pages="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup"
+    xmlns:animations="clr-namespace:Rg.Plugins.Popup.Animations;assembly=Rg.Plugins.Popup"
+    x:Class="Suricato.Views.PopUps.PopUpMessage">
+    <StackLayout VerticalOptions="Center" HorizontalOptions="FillAndExpand" Padding="40, 20, 40, 0">
+        <Frame CornerRadius="10" Padding="10" BackgroundColor="White">
+            <StackLayout BackgroundColor="White" Padding="20, 20, 20, 5">
+                <Label x:Name="lblTitle" Style="{StaticResource PopUpTitle}" HorizontalTextAlignment="Center"></Label>
+                <ScrollView>
+                    <StackLayout Padding="0, 10, 0, 0">
+                        <StackLayout Orientation="Horizontal">
+                            <Label x:Name="lblContent" Style="{StaticResource PopUpContent}" HorizontalTextAlignment="Center"></Label>
+                        </StackLayout>
+                        <Button Text="Fechar" x:Name="btClose"  Style="{StaticResource default_button}"></Button>
+                    </StackLayout>
+                </ScrollView>
+            </StackLayout>
+        </Frame>
+    </StackLayout>
+</pages:PopupPage>

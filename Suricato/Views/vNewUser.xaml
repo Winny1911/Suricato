@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Suricato.Views.vNewUser">
+    <ContentPage.Content>
+        <StackLayout Style="{StaticResource main_container}" x:Name="MainStackLayout">
+
+            <Grid HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <Image Grid.Column="0" Source="ic_top_home.png" Aspect="AspectFit"/>
+                <Image Grid.Column="1" Source="ic_top_user.png" Aspect="AspectFit"/>
+                <Image Grid.Column="2" Source="ic_top_gps.png" Aspect="AspectFit"/>
+
+
+            </Grid>
+            
+            
+            <StackLayout Style="{StaticResource content_container}" Margin="0,20,0,0">
+
+                <Label x:Name="lblHeader" Style="{StaticResource common_title}" Text="Novo Usuário" HorizontalTextAlignment="Center" />
+
+                <Label x:Name="lblInfotext" Style="{StaticResource content_text}" HorizontalTextAlignment="Center" Text="Insira abaixo os dados de acesso do usuário ao sistema Suricato" Margin="30,0,30,0" />
+
+                <StackLayout Margin="0,30,0,0">
+                    <Entry  Placeholder="Sistema" Style="{StaticResource common_entry}"/>
+                    <Entry  Placeholder="E-mail" Style="{StaticResource common_entry}"/>
+                    <Entry  Placeholder="Senha" Style="{StaticResource common_entry}"/>
+                </StackLayout>
+                
+                <Button Style="{StaticResource default_button}" Text="PROSSEGUIR" x:Name="btNext" />
+
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Suricato.Views.vUserChekin">
+    <ContentPage.Content>
+        <StackLayout Style="{StaticResource main_container}" x:Name="MainStackLayout">
+            <StackLayout Style="{StaticResource content_container}" Margin="0,20,0,0">
+
+                <Grid x:Name="grdCompanyListTrigger" Style="{StaticResource listbox_grid_container}">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="28"/>
+                    </Grid.ColumnDefinitions>
+                    <Label x:Name="listViewPlaceHolder" Grid.Column="0" Style="{StaticResource litbox_trigger_label}"/>
+                    <Image Source="ic_down_arrow.png" Grid.Column="1"/>
+                </Grid>
+
+                <Entry  x:Name="eEmail"  Style="{StaticResource common_entry}" Text="teste@teste.com.br" />
+                <Entry  x:Name="eMatricula"  Style="{StaticResource common_entry}" Text="273473268" />
+               
+                <Button Style="{StaticResource default_button}" Text="SENHA TEMPORÁRIA" x:Name="btProsseguir" />
+
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Suricato.Views.vMain">
+    <ContentPage.Content>
+        <StackLayout Style="{StaticResource main_container}" x:Name="MainStackLayout" >
+            
+            <StackLayout Style="{StaticResource content_container}" VerticalOptions="FillAndExpand">
+                <StackLayout HorizontalOptions="CenterAndExpand" Orientation="Vertical" x:Name="StackInfo">
+                    <Image Style="{StaticResource main_view_avatar}"/>
+                    <Label Style="{StaticResource header_title}" HorizontalTextAlignment="Center" Margin="0,20,0,40"  x:Name="lblContent"/>
+                </StackLayout>
+                <StackLayout HorizontalOptions="CenterAndExpand" Orientation="Vertical" x:Name="StackMark" IsVisible="False">
+                    <Image  x:Name="imgRegisterMark"/>
+                </StackLayout>
+            </StackLayout>
+
+            <StackLayout Style="{StaticResource main_options_container}" Orientation="Horizontal" HorizontalOptions="CenterAndExpand" > 
+                <StackLayout  Style="{StaticResource main_options_button_container}" x:Name="btEntraceMark" >
+                    <Image Source="ic_main_0.png"   Style="{StaticResource main_options_icon}"/>
+                    <Label x:Name="lblMarkEntrance" Style="{StaticResource main_options_label}"/>
+                </StackLayout>
+
+                <StackLayout Style="{StaticResource main_options_button_container}"  x:Name="btMarksMirror" >
+                    <Image Source="ic_main_1.png" Style="{StaticResource main_options_icon}"/>
+                    <Label x:Name="lblMarksList" Style="{StaticResource main_options_label}"/>
+                </StackLayout>
+
+                <StackLayout Style="{StaticResource main_options_button_container}" x:Name="btNewUser" >
+                    <Image Source="ic_main_2.png" Style="{StaticResource main_options_icon}"/>
+                    <Label x:Name="lblNewUser" Style="{StaticResource main_options_label}"/>
+                </StackLayout>
+            </StackLayout>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
